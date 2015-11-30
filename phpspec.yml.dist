@@ -2,3 +2,5 @@ suites:
     sharils_suite:
         namespace: Sharils
         psr4_prefix: Sharils
+
+bootstrap: ./bootstrap.php
