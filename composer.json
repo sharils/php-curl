@@ -13,7 +13,10 @@
     "description": "Simplify php curl",
     "license": "AGPL-3.0",
     "name": "sharils/curl",
-    "require": {},
+    "require": {
+        "php": "^5.5",
+        "ext-curl": "*"
+    },
     "require-dev": {
         "phpspec/phpspec": "2.3.*"
     }
