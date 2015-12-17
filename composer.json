@@ -1,0 +1,23 @@
+{
+    "authors": [
+        {
+            "email": "sharils@users.noreply.github.com",
+            "name": "sharils"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sharils\\": "./src/"
+        }
+    },
+    "description": "Simplify php curl",
+    "license": "AGPL-3.0",
+    "name": "sharils/phurl",
+    "require": {
+        "php": "^5.5",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.3.*"
+    }
+}
