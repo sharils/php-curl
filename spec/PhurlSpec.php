@@ -4,9 +4,9 @@ namespace spec\Sharils;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Sharils\Curl;
+use Sharils\Phurl;
 
-class CurlSpec extends ObjectBehavior
+class PhurlSpec extends ObjectBehavior
 {
     const CONTENT = 'Lorem ipsum dolor sit amet.';
 
@@ -35,7 +35,7 @@ class CurlSpec extends ObjectBehavior
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Sharils\Curl');
+        $this->shouldHaveType('Sharils\Phurl');
     }
 
     public function it_executes_parallel()

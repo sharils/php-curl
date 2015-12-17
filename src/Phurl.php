@@ -6,7 +6,7 @@ use InvalidArgumentException;
 use RuntimeException;
 use stdClass;
 
-class Curl
+class Phurl
 {
     const EOL = "\r\n";
 
