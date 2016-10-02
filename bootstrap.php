@@ -6,7 +6,7 @@ shell_exec(
     TEST_SERVER .
     ':80 -v ' .
     __DIR__ .
-    ':/var/www/html --name sharils_curl php:apache'
+    '/var/www/html:/var/www/html --name sharils_curl php:apache'
 );
 usleep(50000);
 
