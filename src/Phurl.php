@@ -33,7 +33,7 @@ class Phurl
         return call_user_func_array(function (
             array $options,
             array $otherOptions = null
-        ) use ($options) {
+        ) {
             $curls = array_map([$this, 'opt2Curl'], func_get_args());
 
             $errors = $this->exec($curls);
