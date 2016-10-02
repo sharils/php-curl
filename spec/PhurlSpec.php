@@ -89,8 +89,6 @@ class PhurlSpec extends ObjectBehavior
         $this->parseResponse($curl)->shouldBeParsed([
             self::CONTENT,
             (object) [
-                'server' => 'Apache/2.4.10 (Debian) PHP/7.0.0',
-                'xPoweredBy' => 'PHP/7.0.0',
                 'contentLength' => (string) strlen(self::CONTENT),
                 'contentType' => 'text/html; charset=UTF-8',
             ]
@@ -104,8 +102,6 @@ class PhurlSpec extends ObjectBehavior
         $this->parseResponse($curl)->shouldBeParsed([
             null,
             (object) [
-                'server' => 'Apache/2.4.10 (Debian) PHP/7.0.0',
-                'xPoweredBy' => 'PHP/7.0.0',
                 'contentLength' => '0',
                 'contentType' => 'text/html; charset=UTF-8',
             ]
@@ -148,7 +144,11 @@ class PhurlSpec extends ObjectBehavior
 
     public function shouldBeParsed($subject, $parsed)
     {
-        unset($subject[1]->date);
+        unset(
+            $subject[1]->date,
+            $subject[1]->server,
+            $subject[1]->xPoweredBy
+        );
 
         return $subject == $parsed;
     }
