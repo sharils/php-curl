@@ -57,6 +57,11 @@ class PhurlSpec extends ObjectBehavior
         ))->shouldBeResourcesOf('curl');
     }
 
+    public function it_requires_array_of_array()
+    {
+        $this->shouldThrow('PhpSpec\Exception\Example\ErrorException')->duringCurl([1]);
+    }
+
     public function it_sets_curl_resource_content()
     {
         $this->curl(array_pad(
